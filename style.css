@@ -1,0 +1,250 @@
+/* GLOBAL ADJUSTMENTS */
+* {
+    margin: 0px;
+    padding: 0px;
+    
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ADJUSTMENT OF UNITS AND VARIABLES */
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Mulish', sans-serif;
+
+    --fc-primary: hsl(240, 6%, 13%);
+    --fc-secondary: hsl(240, 6%, 58%);
+    --fc-terciary: hsl(0, 0%, 24%);
+
+    --background-color-primary: #F5F5F5;
+    --background-color-secondary: #FFF;
+    --background-color-terciary: #EEE;
+}
+
+/* #APP = HEADER + MAIN + FOOTER ON A ROW GRID */
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content; /* TO FIX HEADER AND FOOTER ON IT'S LOCATION */
+
+    height: 100vh;
+}
+
+/* CONTAINER SETUP */
+.container {
+    padding: 1.6rem 3.2rem;
+    margin: 0 auto;
+    
+    width: min(112rem, 100%); /* DEFINES THAT THIS OBJECT WILL CHOOSE BETWEEN THE SMALLEST AMMOUNT EXPRESSED HERE */
+}
+
+/* HEADER ENTRANCE SETUP */
+header {
+    --startY: -100%;  /* IT MEANS THE START POSITION IS 100% ABOVE THE ORIGINAL POSITION */
+    animation: movein 1s cubic-bezier(0.1, 0, 0.23, 0.98);
+}
+
+/* BODY ADJUSTMENTS */
+body {
+    font-size: 1.6rem;
+
+    font-family: var(--ff-primary);
+}
+
+/* HEADER SET UP TO STAND IN A LINE */
+header, nav, nav ul {
+    display: flex;
+    gap: 7.2rem;
+
+    align-items: center;
+}
+
+/* ADJUSTMENT OF THE FORM TO FIT THE WHOLE SPACE ASIDE FROM OTHER ITEMS */
+header form {
+    flex: 1;
+}
+
+/*  */
+ul li {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    color: var(--fc-primary);
+
+    list-style: none;
+
+}
+
+/* ADJUST MENU ITEM COLOR ON HOVER */
+ul li:hover {
+    color: var(--fc-secondary);
+}
+
+/* HIDE LABEL TEXT SO THAT IT'S NOT DISPLAYED BUT STILL WORKS FOR A11Y */
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden; /* HIDES THE OVERFLOW OF LABEL TEXT, THAT EXCEEDS THE TYPING AREA */
+
+    position: absolute; /* DEFINES THAT THE LABEL TEXT WILL BE POSITIONED RIGHT AT THE START OF .input-wrapper */ 
+}
+
+/* INPUT SETUP */
+.input-wrapper input {
+    width: 100%; /* DEFINES THAT IT WILL OCUPY THE WHOLE AREA PRE-DEFINED BY "header form { flex: 1 } */
+
+    padding: 1.2rem 1.6rem;
+
+    background-color: var(--background-color-terciary);
+
+    border: none;
+    border-radius: 5px;
+
+    
+    font-family: var(--ff-primary);
+    font-size: 1.6rem;
+}
+
+/* PLACEHOLDER TEXT SETUP */
+.input-wrapper input::placeholder {
+    opacity: 0.5;
+    font-weight: 600;
+    color: var(--fc-terciary);
+}
+
+/* AVATAR SETUP */
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+main {
+    background-color: var(--background-color-primary);
+
+    overflow-y: scroll; /* IT MAKES THE GALLERY SCROLL AND BOTH HEADER AND FOOTER STAY ON IT'S FIXED POSITION */
+}
+
+/* "GALLERY" TEXT SETUP */
+main h1 {
+    font-size: 2.4rem;
+
+    padding-top: 1.2rem;
+
+    --delay: .4s;
+    animation: fadein 2s var(--delay) backwards;
+}
+
+/* GALLERY SETUP */
+.gallery {
+    margin-top: 3.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+/* CARD SETUP */
+.item {
+    background-color: var(--background-color-secondary);
+
+    border-radius: 8px;
+
+    overflow: hidden; /* DEFINES THAT THE IMAGE OVERFLOW WILL BE HIDDEN ON THE CORNERS */
+    
+    display: flex;
+    flex-direction: column;
+
+    --delay: .4s;
+    animation: fadein 2s var(--delay) backwards;
+}
+
+/* IMAGE SIZE SETUP */
+.item img {
+    width: 100%; /* DEFINES THAT THE WIDTH OF THE IMAGE WILL DISPLAY 100% OF IMAGE'S WIDTH, OCCUPYING THE SPACE SETUP ABOVE (.gallery { grid-template-columns: repeat(3, 1fr); }) TO DISPLAY IT'S ENTIRE CONTENT */
+
+    aspect-ratio: 16/9;
+    object-fit: cover;
+
+    /* transition-property: all;
+    transition-duration: 300ms;
+    transition-delay: 0.2s;
+    transition-timing-function: ease-in-out; */
+    transition: all 300ms 0.2s ease-in-out; /* THE LINES COMMENTED ABOVE REPRESENT THE SAME SETUP ON THIS SHORTCUT */
+}
+
+/* IMAGE SETUP ON HOVER */
+.item img:hover {
+    filter: saturate(150%);
+    transform: scale(1.05);
+}
+
+/* DEFINES THE SPACE AROUND H2 + TAGS */
+.details {
+    background-color: var(--background-color-secondary);
+
+    padding: 2.2rem;
+
+    z-index: 1;
+    position: relative;
+}
+
+/* FIGCAPTION SETUP */
+h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+
+    color: var(--fc-primary);
+}
+
+/* TAGS SPACE SETUP */
+.tags {
+    margin-top: 1.2rem;
+}
+
+/* TAGS GENERAL SETUP (APPLYING SET UP ON "SPAN" WILL AUTOMATICALLY DEFINE THE WIDTH OF THE TAG TO IT'S CONTENT SIZE) */
+.tags span {
+    background-color: var(--background-color-primary);
+    
+    padding: 7px;
+    
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    line-height: 0px;
+    
+    color: var(--fc-primary);
+    
+    border-radius: 4px;
+}
+
+/* FOOTER SETUP */
+footer p {
+    font-weight: 600;
+    text-align: center;
+
+    padding: 1.6rem;
+
+    --startY: 100%; /* IT MEANS THE START POSITION IS 100% BELOW THE ORIGINAL POSITION */
+    animation: movein 1s ease-out;
+}
+
+/* ANIMATIONS */
+@keyframes movein {
+    from {
+        transform: translateY(var(--startY)); /* IT USES THE VARIABLE SET ON EACH OF THE OBJECTS THAT USE THIS ANIMATION */
+        opacity: 0%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+}

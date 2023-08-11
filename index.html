@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- LINK TO CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- DETAILS -->
+    <title>Fotoblog</title>
+</head>
+
+<body>
+    <!-- WHOLE APP -->
+    <div id="app">
+        <!-- HEADER -->
+        <header class="container">
+            <nav>
+                <img src="./assets/camera.png" alt="logotipo de camera vetorizada d fotoblog" class="logo">
+
+                <ul>
+                    <li>Home</li>
+                    <li>Gallery</li>
+                </ul>
+            </nav>
+        
+            <form>
+                <div class="input-wrapper">
+                    <label for="search">Pesquise por imagens e coleções</label>
+                    <input id="search" type="text" placeholder="Pesquise por imagens e coleções"></input> 
+                </div>
+            </form>
+
+            <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="foto de perfil do usuario" class="avatar">
+            
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <div class="container">
+                <h1>Gallery</h1>
+
+                <!-- GALLERY -->
+                <section class="gallery">
+                    <figure class="item">
+                        <img src="https://images.unsplash.com/photo-1615226751273-707cc117cf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80" alt="pitcture of a desktop with a laptop, headphone and other digital work stuff">
+
+                        <figcaption class="details">
+                            <h2>Electric Workspace</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="item" style="--delay: .6s">
+                        <img src="https://images.unsplash.com/photo-1591693117893-7cbfc0a7ac69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="dark mouse and keyboard with blue light standing on a desktop with an overall red light">
+
+                        <figcaption class="details">
+                            <h2>Dark and red</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="item" style="--delay: .8s">
+                        <img src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="computer with two screens displaying an island on the screensaver, one vertical and other horizontal standing on a wood support, and a headphone all on a table">
+
+                        <figcaption class="details">
+                            <h2>Organization and grids</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="item" style="--delay: 1s">
+                        <img src="https://images.unsplash.com/photo-1621743018966-29194999d736?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="workspace with two screens displaying a blue lightning among other work stuff on a wood table, with an overall green light">
+
+                        <figcaption class="details">
+                            <h2>Hive</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="item" style="--delay: 1.2s">
+                        <img src="https://images.unsplash.com/photo-1543128639-4cb7e6eeef1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="macbook pro with displaying a purple/orange sunset filled with mountains, standing among a cellphone, headphone, tripod and other work related stuff on a white table">
+
+                        <figcaption class="details">
+                            <h2>Writer setup</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="item" style="--delay: 1.4s">
+                        <img src="https://images.unsplash.com/photo-1628358011826-7f3b8724239f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="workstation with a colorfull display a gamer's chair and a wood table">
+
+                        <figcaption class="details">
+                            <h2>Ergonomy and colors</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                
+                    <figure class="item" style="--delay: 1.6s">
+                        <img src="https://images.unsplash.com/photo-1614624532983-4ce03382d63d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" alt="wood table with work stuff on it, such as a monitor displaying a foggy island, a cup of tea, a closed laptop, a white keyboard and mouse, an iphone, a headphone and a jar of flowers, with an overall blue to red gradient light">
+                        
+                        <figcaption class="details">
+                            <h2>Light show</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                
+                    <figure class="item" style="--delay: 1.8s">
+                        <img src="https://images.unsplash.com/photo-1626968361222-291e74711449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="corner of a room with a workstation filled with digital work equipments and a grey cat standing on it, also a bookshelf filled with books and pencils">
+
+                        <figcaption class="details">
+                            <h2>Deep purple</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>            
+
+                    <figure class="item" style="--delay: 2s">
+                        <img src="https://images.unsplash.com/photo-1634544319848-e4fbf66ed08a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="multi-screen setup displaying lines of code in one of them, a bright orange-blue abstract image on another">
+
+                        <figcaption class="details">
+                            <h2>Multi-screen</h2>
+
+                            <div class="tags">
+                                <span>tag</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </section>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="container"><p>© 2023 - Rocketseat Explorer</p></footer>
+    </div>
+</body>
+</html>
